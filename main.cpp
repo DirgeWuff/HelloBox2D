@@ -7,7 +7,7 @@
 constexpr int windowWidth = 640;
 constexpr int windowHeight = 480;
 constexpr float ppm = 100.0f;
-constexpr float timeStep = 1.0f / 60;
+constexpr float timeStep = 1.0f / 60.0f;
 constexpr int subStep = 4;
 
 Vector2 m2PxVec(const b2Vec2 vec) {
@@ -120,8 +120,8 @@ public:
     m_bodyDef(b2DefaultBodyDef())
     {
         m_position = px2MVec({
-            static_cast<float>(m_X) + static_cast<float>(m_width) / 2,
-            static_cast<float>(m_Y) + static_cast<float>(m_height) / 2
+            static_cast<float>(m_X) + static_cast<float>(m_width) / 2.0f,
+            static_cast<float>(m_Y) + static_cast<float>(m_height) / 2.0f
         });
 
         m_bodyDef.position = m_position;
